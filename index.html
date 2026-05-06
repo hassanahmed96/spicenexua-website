@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiceNexus - Modern IDE for Analog & Mixed-Signal IC Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <a href="#home" class="logo-container">
+            <img src="logo.jfif" alt="SpiceNexus Logo" class="logo-image">
+            <span class="logo-text">SpiceNexus</span>
+        </a>
+        <nav class="nav-buttons">
+            <button class="btn btn-secondary" id="versionBtn">
+                <i class="fas fa-info-circle"></i> v0.1.0
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-logo-container">
+                    <img src="logo.jfif" alt="SpiceNexus" class="hero-logo">
+                </div>
+                <h1>SpiceNexus</h1>
+                <div class="hero-subtitle">The Modern IDE for Analog & Mixed-Signal IC Design</div>
+                <p class="hero-description">
+                    Bring modern software workflows to hardware design. SpiceNexus combines the power of LTspice with a sleek, intuitive IDE, 
+                    built-in waveform database, smart signal browser, and upcoming Git-LFS version control—all designed for today's engineers.
+                </p>
+                <div class="hero-cta-group">
+                    <button class="btn btn-primary" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download Now
+                    </button>
+                    <button class="btn btn-secondary" id="docsBtn">
+                        <i class="fas fa-book"></i> Read the Manual
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Circuit Divider -->
+        <div class="circuit-divider"></div>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="text-center mb-lg">Powerful Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>SQLite Waveform Database</h3>
+                        <p>Store, organize, and instantly retrieve simulation waveforms with built-in database management.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Smart Signal Browser</h3>
+                        <p>Navigate complex simulations with intelligent signal discovery and real-time waveform visualization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Modern Python IDE</h3>
+                        <p>Write, test, and manage analog designs in a lightweight, powerful IDE built for engineers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-git-alt"></i>
+                        </div>
+                        <h3>Git-LFS Integration (Coming Soon)</h3>
+                        <p>Version control for your designs with seamless Git integration and large file support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Copilot (Coming Soon)</h3>
+                        <p>Get intelligent suggestions and automate routine design tasks with built-in AI assistance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>LTspice & ngspice Support</h3>
+                        <p>Seamlessly wrap and enhance your favorite simulation tools with a modern interface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Circuit Divider -->
+        <div class="circuit-divider"></div>
+
+        <!-- Download Section -->
+        <section class="downloads">
+            <div class="container">
+                <div class="downloads-header">
+                    <h2>Download SpiceNexus</h2>
+                    <p>Choose your operating system and get started in seconds</p>
+                </div>
+                <div class="downloads-grid">
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <h3 class="download-card-title">Windows</h3>
+                        <p class="download-card-text">Compatible with Windows 10 & 11 (64-bit)</p>
+                        <button class="btn btn-primary" onclick="downloadApp('windows')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h3 class="download-card-title">macOS</h3>
+                        <p class="download-card-text">Compatible with macOS 11+ (Intel & Apple Silicon)</p>
+                        <button class="btn btn-primary" onclick="downloadApp('macos')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h3 class="download-card-title">Linux (WINE)</h3>
+                        <p class="download-card-text">For Ubuntu, Debian, Fedora & derivatives</p>
+                        <button class="btn btn-primary" onclick="downloadApp('linux')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Section -->
+        <section class="documentation">
+            <div class="container">
+                <h2>Documentation & Support</h2>
+                <p>Comprehensive guides, API documentation, and community support to help you get the most out of SpiceNexus.</p>
+                <button class="btn btn-secondary" id="docsBtnFooter">
+                    <i class="fas fa-book"></i> Read the User Manual (PDF)
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SpiceNexus. All rights reserved.</p>
+    </footer>
+
+    <!-- Version Info Modal -->
+    <div id="versionModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeVersionBtn">&times;</button>
+            <div class="modal-header">
+                <i class="fas fa-code-branch"></i> Application Info
+            </div>
+            <div class="version-info">
+                <div class="version-label">Application Version</div>
+                <div class="version-value" id="appVersion">0.1.0</div>
+            </div>
+            <div class="version-info">
+                <div class="version-label">User Manual Version</div>
+                <div class="version-value" id="manualVersion">1.0.0</div>
+            </div>
+            <div class="version-info">
+                <div class="version-label">Last Updated</div>
+                <div class="version-value" id="lastUpdated">May 4, 2026</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
